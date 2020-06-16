@@ -1,2 +1,6 @@
-FROM nginx
-RUN echo '这是一个本地构建的nginx镜像' > /usr/share/nginx/html/index.html
+FROM k8s.gcr.io/kube-apiserver:v1.18.3
+FROM k8s.gcr.io/kube-controller-manager:v1.18.3
+FROM k8s.gcr.io/kube-scheduler:v1.18.3
+FROM k8s.gcr.io/kube-proxy:v1.18.3
+FROM k8s.gcr.io/pause:3.2
+FROM k8s.gcr.io/etcd:3.4.3-0
